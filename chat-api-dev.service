@@ -1,0 +1,17 @@
+[Unit]
+Description=Chat API DEV
+
+[Service]
+ExecStart=/home/ec2-user/.nvm/versions/node/v8.11.4/bin/node /home/ec2-user/jobs-chat/dist/server.js
+Restart=always
+#User=nobody
+# Note RHEL/Fedora uses 'nobody', Debian/Ubuntu uses 'nogroup'
+#Group=nogroup
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+Environment=MONGODB_CONNECTION_STRING=mongodb://admin:Gagarina18@172.31.46.253:27017/chat-db
+Environment=PORT=3001
+WorkingDirectory=/home/ec2-user/jobs-chat
+
+[Install]
+WantedBy=multi-user.target
