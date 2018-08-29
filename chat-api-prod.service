@@ -2,7 +2,7 @@
 Description=Chat API DEV
 
 [Service]
-ExecStart=/home/ec2-user/.nvm/versions/node/v8.11.4/bin/node /home/ec2-user/jobs-chat/dist/server.js
+ExecStart=/usr/bin/node /home/ec2-user/jobs-chat/dist/server.js
 Restart=always
 #User=skills
 # Note RHEL/Fedora uses 'nobody', Debian/Ubuntu uses 'nogroup'
